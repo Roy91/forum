@@ -173,6 +173,9 @@
           </div>
           <div class="container">
             <hr>
+            <label for="uname"><b>Pseudo</b></label>
+            <input type="text" placeholder="Pseudo" name="uname" required>
+
             <label for="email"><b>Email</b></label>
             <input type="text" placeholder="Enter Email" name="email" required>
 
@@ -186,7 +189,9 @@
               <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Connexion Auto
             </label>
             <hr>
-            <p>En cliquant sur le bouton, j'accepte les <a href="#" style="color:dodgerblue">conditions générales</a>.</p>
+            <label>
+              <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> J'accepte les <a href="#" style="color:dodgerblue">conditions générales</a>.
+            </label>
             <div class="clearfix">
               <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Annuler</button>
               <button type="submit" class="signup" style="background-color:#99e265">S'INSCRIRE</button>

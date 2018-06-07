@@ -168,7 +168,7 @@ span.psw {
     /* Position it in the top right corner outside of the modal */
     position: absolute;
     right: 25px;
-    top: 0;
+    top: 1%;
     color: #000;
     font-size: 35px;
     font-weight: bold;
@@ -217,7 +217,7 @@ input[type=text]:focus, input[type=password]:focus {
 /* Style the horizontal ruler */
 hr {
   border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
+  margin-bottom: 3%;
 }
 
 /* Clear floats */
