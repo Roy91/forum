@@ -1,13 +1,14 @@
+<?php session_destroy();?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <link rel="stylesheet" href="connected.css">
-    <title>Tek World</title>
+    <link rel="stylesheet" href="index.css">
     <style>
-    @import url('https://fonts.googleapis.com/css?family=Anton');
-    </style>
+	@import url('https://fonts.googleapis.com/css?family=Anton');
+	</style>
+    <title>Tek World</title>
   </head>
   <body>
 
@@ -15,14 +16,6 @@
     <div class="grid">
       <div class="row">
         <h1 class="logo"><a href="file:///home/simplon/Documents/formation/forum/index.html"><img src="logo.png"></a></h1>
-        <ul id="menu-accordeon"><li><a href="#">MON COMPTE</a>
-         <ul>
-			    <li><a href="#">Profil</a></li>
-			    <li><a href="#">Déconnection</a></li>
-		    </ul>
-	      </li>
-       </ul>
-        <img src="user-icon.png" class="user-icon">
       </div>
 
 
@@ -140,22 +133,22 @@
         </div>
 
 
-       <!-- <button type="button" onclick="document.getElementById('id01').style.display='block'" class="btn btn-success sign" id="bc">SE CONNECTER</button> -->
-        <!-- The Modal -->
-       <!-- <div id="id01" class="modal">
-          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span> -->
-        <!-- Modal Content -->
-         <!-- <form class="modal-content animate" action="/action_page.php">
+       <button type="button" onclick="document.getElementById('id01').style.display='block'" class="btn btn-success sign" id="bc">SE CONNECTER</button>
+
+       <div id="id01" class="modal">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+         <form class="modal-content animate" action="http://localhost/forum/connected.php" method="post">
             <div class="imgcontainer">
               <img src="user-icon.png" alt="Avatar" class="avatar">
             </div>
             <div class="container">
               <hr>
               <label for="uname"><b>Pseudo</b></label>
-              <input type="text" placeholder="Pseudo" name="uname" required>
+              <input type="text" placeholder="Pseudo" name="pseudo" required>
 
               <label for="psw"><b>Mot de passe</b></label>
-              <input type="password" placeholder="*********" name="psw" required>
+              <input type="password" placeholder="*********" name="pws" required>
 
               <button type="submit" style="background-color:#99e265">SE CONNECTER</button>
               <label>
@@ -172,28 +165,24 @@
         </div>
 
 
-      <button type="button" onclick="document.getElementById('id02').style.display='block'" class="btn btn-success sign" id="bi">S'INSCRIRE</button> -->
-      <!-- The Modal -->
-     <!-- <div id="id02" class="modal">
+      <button type="button" onclick="document.getElementById('id02').style.display='block'" class="btn btn-success sign" id="bi">S'INSCRIRE</button>
+
+     <div id="id02" class="modal">
         <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-        <form class="modal-content" action="/action_page.php">
+        <form class="modal-content" action="http://localhost/forum/connected.php"  method="post" enctype="multipart/form-data">
           <div class="imgcontainer">
             <img src="user-icon.png" alt="Avatar" class="avatar">
-              <input type="file" name="avatar" id="fileToUpload">
           </div>
           <div class="container">
             <hr>
             <label for="uname"><b>Pseudo</b></label>
-            <input type="text" placeholder="Pseudo" name="uname" required>
+            <input type="text" placeholder="Pseudo" name="pseudo" required>
 
             <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" required>
+            <input type="text" placeholder="Enter Email" name="mail" required>
 
             <label for="psw"><b>Mot de passe</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-
-            <label for="psw-repeat"><b>Confirmer mot de passe </b></label>
-            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+            <input type="password" placeholder="Enter Password" name="pwd" required>
 
             <label>
               <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Connexion Auto
@@ -209,7 +198,7 @@
           </div>
           <hr>
         </form>
-      </div> -->
+      </div>
 
 
 
@@ -229,3 +218,5 @@
 
   </body>
 </html>
+<?php
+include($appRoot.'index.php'); ?>
