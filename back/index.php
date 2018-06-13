@@ -1,5 +1,4 @@
 <?php
-echo 'connection à ma base de données';
 $user = 'root';
 $password = 'simplonco';
 $dbname = 'Forum';
@@ -32,42 +31,34 @@ if (isset($_FILES['avatar']) AND $_FILES['avatar']['error'] == 0)
 }
 
 
-if (isset($_POST['pseudo'], $_POST['mail'], $_POST['pwd']))
-{
+if (isset($_POST['pseudo'], $_POST['mail'], $_POST['pwd'])) {
 
   $_POST['pseudo'] = htmlspecialchars($_POST['pseudo']);
   $_POST['mail'] = htmlspecialchars($_POST['mail']);
   $_POST['pwd'] = htmlspecialchars($_POST['pwd']);
-  $pd = $_POST['pwd'];
-  $pd = sha1($pd);
+  $_POST['pwd'] = sha1($_POST['pwd']);
 }
-echo "$pd";
+
 
 
 if (preg_match('#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#', $_POST['mail'])) {
-echo "yeahhhhhhhh";
 
   $req = $db->prepare('INSERT INTO user(pseudo, pwd, mail, date_inscription) VALUES(:pseudo, :pwd, :mail, CURDATE())');
   $req->execute(array(
-      'pseudo' => $pseudo,
-      'pwd' => $pd,
-      'mail' => $mail));
+      'pseudo' => $_POST['pseudo'],
+      'pwd' => $_POST['pwd'],
+      'mail' => $_POST['mail']));
     $req->closeCursor();
 
 }
 
     else {
+
       echo 'L\'adresse : '.$_POST['mail'].' n\'est pas bonnne.<br/>';
     }
 
-    $m = $db->prepare('SELECT id_salon, name_salon FROM salon WHERE  id_salon <= 4'); /*prepare la requete "?" = marqueur mais possibilié de les nommer syntaxe ":nom" ex :id*/
-    $m->execute(array( $_GET['id_salon'])); /*execute en indiquant ce que l'on veut à la place des '?'*//* Si utilise ":nom" on ecrit array('id' => $_GET['id_salon']) et pas besoin d'ecrire dans l'ordre dans ce cas*/
-    echo '<ul>';
-    while ($donnees = $m->fetch()){
-      echo '<li>'. $donnees['id_salon'] . $donnees['name_salon'];
-    }
-    $m->closeCursor();
 
+    //  Récupération de l'utilisateur et de son pass hashé
     $con = $db->prepare('SELECT id_u, pwd FROM user WHERE pseudo = :pseudo');
     $con->execute(array(
         'pseudo' => $pseudo));
@@ -78,7 +69,7 @@ echo "yeahhhhhhhh";
 
     if (!$resultat)
     {
-      
+        echo 'Mauvais identifiant ou mot de passe !';
     }
     else
     {
