@@ -107,7 +107,6 @@ a{
   font-family: 'Anton', sans-serif;
   margin-top: 5%;
   padding-left: 5.5%;
-
 }
 
 .btn-primary{
@@ -153,6 +152,7 @@ h5{
 }
 
 .btn-success{
+  
   margin-left: 40%;
 }
 

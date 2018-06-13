@@ -149,8 +149,10 @@ h5{
   margin: auto;
 }
 
-.btn-success{
+.btn-success
+{
   margin-left: 40%;
+  margin-top: 7%;
 }
 
 #bc{ /*positionnement de bouton se connecter*/
