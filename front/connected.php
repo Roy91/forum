@@ -16,7 +16,7 @@
     <div class="grid">
       <div class="row">
         <h1 class="logo"><a href="file:///home/simplon/Documents/formation/forum/index.html"><img src="logo.png"></a></h1>
-        <ul id="menu-accordeon"><li><a href="#">MON COMPTE</a>
+        <ul id="menu-accordeon"><li><a href="#"><?php echo $_POST['pseudo'] ?></a>
          <ul>
 			    <li><a href="#">Profil</a></li>
 			    <li><a href="http://localhost/forum/accueil.php">Déconnection</a></li>
