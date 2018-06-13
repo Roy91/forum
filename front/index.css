@@ -105,7 +105,7 @@ a{
 .btn-group{
 	font-family: 'Anton', sans-serif;
   margin-top: 5%;
-  padding-left: 5.5%;
+  padding-left: 1.7%;
 }
 .btn-primary{
   /*background-color: #5271FF;*/
@@ -261,7 +261,7 @@ span.psw {
 
 .avatar{
   width: 30%;
-  margin-left: 5.5%;
+  margin-left: 2%;
   background-image:radial-gradient(#99e265, #ab2849);
 }
 
