@@ -35,9 +35,65 @@ a{
 }
 
 .user-icon{
-  margin-left: 81%;
-  margin-top: -7.25%;
+  margin-left: 80%;
+  margin-top: -6.4%;
   height: 50%;
+}
+
+#menu-accordeon {
+  padding:0;
+  margin:0;
+  list-style:none;
+  text-align: center;
+  width: 180px;
+  margin-left: 83%;
+  margin-top: -6%;
+  height: 50%;
+}
+#menu-accordeon ul {
+  padding:0;
+  margin:0;
+  list-style:none;
+  text-align: center;
+}
+#menu-accordeon li {
+   border-radius: 6%;
+   margin-bottom:2%;
+
+}
+#menu-accordeon li li {
+   max-height:0;
+   overflow: hidden;
+   transition: all .5s;
+   border-radius:0;
+   background: #444;
+   box-shadow: none;
+   border:none;
+   margin:0
+}
+#menu-accordeon a {
+  display:block;
+  text-decoration: none;
+  color: #fff;
+  padding: 2% 0;
+  font-size:1.2em
+}
+#menu-accordeon ul li a, #menu-accordeon li:hover li a {
+  font-size:1em
+}
+#menu-accordeon li:hover {
+   background: #5271ff
+}
+#menu-accordeon li li:hover {
+   background: #99e265;
+}
+#menu-accordeon ul li:last-child {
+   border-radius: 0 0 3% 3%;
+   border:none;
+   position: relative;
+}
+#menu-accordeon li:hover li {
+  max-height: 10em;
 }
 
 .barre{
@@ -91,19 +147,18 @@ h5{
   opacity: 0.7;
   width: 70%;
   margin: auto;
-  left:
 }
 
 .btn-success{
   margin-left: 40%;
 }
 
-#bc{
+#bc{ /*positionnement de bouton se connecter*/
   left: -10%;
   top: 89%;
 }
 
-#bi{
+#bi{ /*positionnement de bouton s'identifier*/
   left: 15%;
   top: 89%;
 }
@@ -199,14 +254,15 @@ span.psw {
 
 .imgcontainer{
   padding: 3%;
+  text-align: center;fileToUpload
 }
 
 .avatar{
-  height: 30%;
   width: 30%;
-  margin-left: 35%;
+  margin-left: 5.5%;
   background-image:radial-gradient(#99e265, #ab2849);
 }
+
 
 /* Add a background color when the inputs get focus */
 input[type=text]:focus, input[type=password]:focus {
